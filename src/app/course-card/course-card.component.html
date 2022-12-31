@@ -1,7 +1,13 @@
-<div class="course-card">
-    <div class="course-title"> {{'so thu tu:'+ idx+'Ma Id:' + data.id}} </div>
-    <img width="300" alt="Angular Logo" src="{{data.iconUrl}}">
-    <div class="course-description">{{ data.description }}</div>
+<div class="course-card" *ngIf="data">
+    <div class="course-title" > {{'so thu tu:'+ idx +'Ma Id:' + data?.id}} </div>
+    <!-- *ngIf = true -> show, false -> hide -->
+    <img width="300" alt="Angular Logo" *ngIf="!isImageEmpty() else noImage"  src="{{data.iconUrl}}">
+
+<ng-template #noImage>
+    <p>No available Image</p>
+</ng-template>
+
+    <div class="course-description">{{ data?.description }}</div>
     <button (click)="courseView()"> View Course </button>
 </div>
  
