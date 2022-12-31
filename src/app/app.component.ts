@@ -19,3 +19,4 @@ export class AppComponent {
     console.log(`App Component - click event bubbled 1`, dulieu);
   }
 }
+//gggadasdas
