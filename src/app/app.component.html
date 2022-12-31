@@ -3,9 +3,9 @@
 </div>
 
 <div class="course">
-  <app-course-card (courseCelected)="OnCourseSelected($event)" (courseCelected1)="OnCourseSelected1($event)" [data]="course"  [data1]="xinchao2"></app-course-card>
+  <app-course-card (courseCelected)="OnCourseSelected($event)" [data]="course" ></app-course-card>
   <hr>
-  <app-course-card [data]="rsjsCourse"  (courseCelected)="OnCourseSelected($event) "[data1]="xinchao2"></app-course-card>
+  <app-course-card (courseCelected)="OnCourseSelected($event)" [data]="rsjsCourse"></app-course-card>
   <hr>
-  <app-course-card  [data]="ngrxCourse" (courseCelected)="OnCourseSelected($event)"  [data1]="xinchao2"></app-course-card>
+  <app-course-card (courseCelected)="OnCourseSelected($event)" [data]="ngrxCourse"></app-course-card>
 </div>
