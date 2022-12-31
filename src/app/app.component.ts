@@ -9,13 +9,7 @@ import { __classPrivateFieldGet } from 'tslib';
 export class AppComponent {
   title = 'angular-dive';
   
-  course = COURSES[0];
-  rsjsCourse = COURSES[1];
-  ngrxCourse = COURSES[2];
-  haha = {cuoi : 5 , khongcuoi : 6 };
-  xinchao = {chao :5, khongchao : "khongchao"};
-  xinchao2 = 200;
-  hoho= 5;
+  course = COURSES;
   
   OnCourseSelected(course:any){
     console.log(`App Component - click event bubbled 1`, course);
