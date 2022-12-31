@@ -3,9 +3,11 @@
 </div>
 
 <div class="course">
-  <app-course-card (courseCelected)="OnCourseSelected($event)" [data]="course" ></app-course-card>
-  <hr>
-  <app-course-card (courseCelected)="OnCourseSelected($event)" [data]="rsjsCourse"></app-course-card>
-  <hr>
-  <app-course-card (courseCelected)="OnCourseSelected($event)" [data]="ngrxCourse"></app-course-card>
+  <app-course-card *ngFor="let item of course;
+  let i = index;
+  first as isFirst;" 
+  [class.is-first]="isFirst"
+  (courseCelected)="OnCourseSelected($event)" 
+  [data]="item" 
+  [idx]="i+1"></app-course-card>
 </div>

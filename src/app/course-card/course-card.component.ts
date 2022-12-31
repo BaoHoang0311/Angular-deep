@@ -13,8 +13,7 @@ export class CourseCardComponent implements OnInit {
   
 
   @Input() data !: any;
-
-  @Input() data1 !: any;
+  @Input() idx !: any;
 
   @Output('courseCelected') courseEventEmitter = new EventEmitter<Course>();
 
@@ -27,7 +26,6 @@ export class CourseCardComponent implements OnInit {
   courseView(){
     console.log("card component view -button clicked");
     this.courseEventEmitter.emit(this.data);
-    this.courseCelected1.emit(this.data1);
   }
 
 }
