@@ -15,8 +15,4 @@ export class AppComponent {
     console.log(`App Component - click event bubbled 1`, course);
 
   }
-  OnCourseSelected1(dulieu:any){
-    console.log(`App Component - click event bubbled 1`, dulieu);
-  }
 }
-//gggadasdas

@@ -10,9 +10,8 @@ import { Course } from 'src/model/Course';
   styleUrls: ['./course-card.component.scss']
 })
 export class CourseCardComponent implements OnInit {
-
-
   @Input() data !: any;
+
   @Input() idx !: any;
 
   @Output('courseCelected') courseEventEmitter = new EventEmitter<Course>();

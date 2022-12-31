@@ -2,7 +2,7 @@
      [ngClass]="cardClasses()">
     <div class="course-title"> {{'so thu tu:'+ idx +'Ma Id:' + data?.id}} </div>
     <!-- *ngIf = true -> show, false -> hide -->
-    <img width="300" alt="Angular Logo" *ngIf="!isImageEmpty() else noImage" src="{{data.iconUrl}}">
+    <img width="300" alt="Angular Logo" *ngIf="!isImageEmpty() else noImage " src="{{data.iconUrl}}">
 
     <ng-template #noImage>
         <p>No available Image</p>

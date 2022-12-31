@@ -6,7 +6,6 @@
   <app-course-card *ngFor="let item of course;
   let i = index;
   first as isFirst;" 
-  [class.is-first]="isFirst"
   (courseCelected)="OnCourseSelected($event)" 
   [data]="item" 
   [idx]="i+1"></app-course-card>
