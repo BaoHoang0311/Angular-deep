@@ -27,5 +27,7 @@ export class CourseCardComponent implements OnInit {
     console.log("card component view -button clicked");
     this.courseEventEmitter.emit(this.data);
   }
-
+  isImageEmpty(){
+    return this.data == null || this.data.iconUrl ==null;
+  }
 }
