@@ -10,7 +10,7 @@ import { Course } from 'src/model/Course';
   styleUrls: ['./course-card.component.scss']
 })
 export class CourseCardComponent implements OnInit {
-  
+
 
   @Input() data !: any;
   @Input() idx !: any;
@@ -23,11 +23,18 @@ export class CourseCardComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  courseView(){
+  courseView() {
     console.log("card component view -button clicked");
     this.courseEventEmitter.emit(this.data);
   }
-  isImageEmpty(){
-    return this.data == null || this.data.iconUrl ==null;
+  isImageEmpty() {
+    return this.data == null || this.data.iconUrl == null;
+  }
+  cardClasses() {
+    return {
+      'beginner': this.data.category?.toString().toLowerCase() == 'beginner',
+      'ADVANCEDz': this.data.category?.toString() == 'ADVANCEDz',
+      'ADVANCED': this.data.category?.toString() == 'ADVANCED',
+    }
   }
 }
