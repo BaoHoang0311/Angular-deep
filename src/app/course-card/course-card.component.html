@@ -1,6 +1,11 @@
 <ng-container *ngIf="data">
     <div class="course-card" [ngClass]="cardClasses()">
-        <div class="course-title"> {{'so thu tu:'+ idx +'Ma Id:' + data?.id}} </div>
+        <div class="course-title" *ngIf="idx!=null else noStt"> {{'so thu tu:'+ idx +' Ma Id:' + data?.id}} </div>
+
+        <ng-template #noStt>
+            <div class="course-title">{{'Ma Id:' + data?.id}} </div>
+        </ng-template>
+
         <!-- *ngIf = true -> show, false -> hide -->
         <img width="300" alt="Angular Logo" *ngIf="!isImageEmpty() else noImage " src="{{data.iconUrl}}">
 
