@@ -8,6 +8,17 @@
         <p>No available Image</p>
     </ng-template>
 
+    <div [ngSwitch]="data.lessonsCount">
+        <div  *ngSwitchCase="data.lessonsCount>=10"><p>Bai hoc>10</p></div>
+        <div  *ngSwitchCase="data.lessonsCount<10">Bai hoc nho hon 10  </div>
+    </div>
+
+    <div class="course-category" [ngSwitch]="data.category">
+        <div class="category" *ngSwitchCase="'BEGINNER'"><p>BEGINNER</p></div>
+        <div class="category" *ngSwitchDefault><p>All level</p></div>
+
+    </div>
+
     <div class="course-description">{{ data?.description }}</div>
     <button (click)="courseView()"> View Course </button>
 </div>

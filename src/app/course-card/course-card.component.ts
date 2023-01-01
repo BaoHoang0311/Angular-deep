@@ -36,5 +36,8 @@ export class CourseCardComponent implements OnInit {
       'ADVANCED': this.data.category?.toString() == 'ADVANCED',
     }
   }
+  cardClassesAdvance() {
+    return { 'ADVANCEDz': this.data.category?.toString() == 'ADVANCEDz' }
+  }
 }
 //zz
