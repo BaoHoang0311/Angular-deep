@@ -1,7 +1,7 @@
 
 
 export const COURSES: any = [
-    undefined,
+    // undefined,
     {
         id: 1,
         description: "Angular Core Deep Dive abcdefsdfsafas",
@@ -16,7 +16,6 @@ export const COURSES: any = [
         category: 'BEGINNER',
         lessonsCount: 10
     },
-
     {
         id: 3,
         description: 'NgRx In Depth',

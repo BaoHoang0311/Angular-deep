@@ -1,12 +1,18 @@
+<h1>{{title}}</h1>
+<p>{{startDate |  date: "dd/MM/yy" }}</p>
+<p>{{price | number : '3.3-5' }}</p>
+<p>{{rate |  percent: '.3' }}</p>
+
 <div class="top-menu">
   <img class="logo" src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 </div>
 
+<div *ngFor="let pair of a | keyvalue" >
+  {{pair.key}}
+</div>
+
 <div class="course">
-  <app-course-card *ngFor="let item of course;
+  <app-course-card *ngFor="let item of course | slice: 0:3;
   let i = index;
-  first as isFirst;" 
-  (courseCelected)="OnCourseSelected($event)" 
-  [data]="item" 
-  [idx]="i+1"></app-course-card>
+  first as isFirst;" (courseCelected)="OnCourseSelected($event)" [data]="item" [idx]="i+1"></app-course-card>
 </div>
